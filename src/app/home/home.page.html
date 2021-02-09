@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <strong><ion-icon name="log-in-outline"></ion-icon></strong>
+    <ion-item>
+      <ion-label position="floating">Kullanıcı Adı</ion-label>
+      <ion-input clearInput placeholder="Kullanıcı Adı" [(ngModel)]="userName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Şifre</ion-label>
+      <ion-input clearInput placeholder="Şifre" type="password" [(ngModel)]="passWord"></ion-input>
+    </ion-item>
+<ion-button shape="round" (click) = 'girisYap()'>Giriş Yap</ion-button> 
+
+
+
+</div>
 </ion-content>

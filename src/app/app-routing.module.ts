@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'anasayfa',
+    loadChildren: () => import('./anasayfa/anasayfa.module').then( m => m.AnasayfaPageModule)
+  },
 ];
 
 @NgModule({
